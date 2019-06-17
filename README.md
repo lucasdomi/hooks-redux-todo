@@ -1,3 +1,3 @@
-##Hooks Todo
+### Hooks Todo
 
-Aplicação criada para testar a nova feeature do Redux, a integração com o React Hooks.
+Aplicação criada para testar a nova feature do Redux, a integração com o React Hooks.
