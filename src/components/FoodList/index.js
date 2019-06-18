@@ -1,40 +1,40 @@
 import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-function addTeamAction(title) {
+function addFoodAction(title) {
   return { type: 'ADD_FOOD', title }
 }
 
-function removeTeamAction (title) {
+function removeFoodAction (title) {
   return { type: 'REMOVE_FOOD', title}
 }
 
 export default function TeamList() {
-  const teams = useSelector(state => state.data);
+  const foods = useSelector(state => state.data);
   const dispatch = useDispatch();
   const [value, setValue] = useState("");
 
-  function addTeam(e) {
+  function addFood(e) {
     e.preventDefault();
-    dispatch(addTeamAction(value))
+    dispatch(addFoodAction(value))
   }
 
-  function removeTeam (e) {
-    dispatch(removeTeamAction(e.currentTarget.parentNode.id))
+  function removeFood (e) {
+    dispatch(removeFoodAction(e.currentTarget.parentNode.id))
   }
 
   return (
     <>
     <h1>Lista de Alimentos</h1>
     <ul>
-      { teams.map(team => 
+      { foods.map(team => 
       <li id={team} key={team}>
         {team}
-        <button onClick={removeTeam}>Remover</button>
+        <button onClick={removeFood}>Remover</button>
       </li>
       )}
     </ul>
-    <form onSubmit={addTeam}>
+    <form onSubmit={addFood}>
       <label>
         Adicionar Item:
         <input

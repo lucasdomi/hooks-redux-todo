@@ -2,8 +2,8 @@ import { createStore } from 'redux';
 
 const INITIAL_STATE = {
   data: [
-    'Tomate',
-    'Batata',
+    'Hamburguer',
+    'Batata Frita',
   ],
 };
 
