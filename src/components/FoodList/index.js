@@ -27,9 +27,9 @@ export default function TeamList() {
     <>
     <h1>Lista de Alimentos</h1>
     <ul>
-      { foods.map(team => 
-      <li id={team} key={team}>
-        {team}
+      { foods.map(food => 
+      <li id={food} key={food}>
+        {food}
         <button onClick={removeFood}>Remover</button>
       </li>
       )}
